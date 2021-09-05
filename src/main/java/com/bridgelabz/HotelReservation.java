@@ -1,7 +1,15 @@
 package com.bridgelabz;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class HotelReservation {
-    public static void main(String[] args) {
-        System.out.println("Welcome To Hotel Reservation Program");
+    private List<Hotel> hotels;
+
+    public HotelReservation() {
+        this.hotels = new ArrayList<>();
+    }
+    public boolean addHotel(Hotel hotel) {
+        return this.hotels.add(hotel);
     }
 }
