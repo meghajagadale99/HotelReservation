@@ -11,6 +11,7 @@ public class HotelReservation {
     public HotelReservation() {
         this.hotels = new ArrayList<>();
     }
+
     public boolean addHotel(Hotel hotel) {
         return this.hotels.add(hotel);
     }
@@ -58,9 +59,9 @@ public class HotelReservation {
         }
     }
     public static void main(String[] args) throws Exception {
-        Hotel hotel1 = new Hotel("LakeWood","Regular", 110,90);
-        Hotel hotel2 = new Hotel("BridgeWood","Regular", 150, 50);
-        Hotel hotel3 = new Hotel("RidgeWood","Regular", 220, 150);
+        Hotel hotel1 = new Hotel("LakeWood","Regular", 110,90, 3);
+        Hotel hotel2 = new Hotel("BridgeWood","Regular", 150, 50, 4);
+        Hotel hotel3 = new Hotel("RidgeWood","Regular", 220, 150, 5);
         String sDate1="10-09-2020";
         String sDate2="11-09-2020";
         Date date1=new SimpleDateFormat("dd-MM-yyyy").parse(sDate1);
