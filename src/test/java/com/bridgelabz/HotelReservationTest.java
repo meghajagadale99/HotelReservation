@@ -8,15 +8,21 @@ public class HotelReservationTest {
 
     @Test
     public void whenAddedHotel_ShouldReturn_AddedHotel() {
-        Assert.assertTrue(hotelReservation.addHotel(new Hotel("LakeWood", 110, 90)));
-        Assert.assertTrue(hotelReservation.addHotel(new Hotel("Bridgewood", 150,50 )));
-        Assert.assertTrue(hotelReservation.addHotel(new Hotel("Ridgewood", 220, 150)));
+        Assert.assertTrue(hotelReservation.addHotel(new Hotel("LakeWood", "Regular", 110, 90)));
+        Assert.assertTrue(hotelReservation.addHotel(new Hotel("Bridgewood", "Regular",150, 50 )));
+        Assert.assertTrue(hotelReservation.addHotel(new Hotel("Ridgewood", "Regular", 220, 150)));
     }
 
     @Test
-    public void toFindTheChepeastHotel() {
+    public void toFindTheCheapestHotel() {
         HotelReservation cheapHotel = new HotelReservation();
         cheapHotel.findCheapestHotel();
     }
+    @Test
+    public void toFindTheCheapestHotel_OnWeekdayAndWeekend() {
+        HotelReservation cheapHotel = new HotelReservation();
+        cheapHotel.findCheapestHotel_Weekday_Weekend();
+    }
+
 }
 
